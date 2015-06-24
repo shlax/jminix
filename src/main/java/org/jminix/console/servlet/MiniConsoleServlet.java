@@ -28,7 +28,9 @@ import org.restlet.engine.util.ChildContext;
 import org.restlet.ext.servlet.ServerServlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 
+@WebServlet("/jmx/*")
 public class MiniConsoleServlet extends ServerServlet
 {
     private static final long serialVersionUID = 1L;

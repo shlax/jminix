@@ -114,7 +114,7 @@ public class OperationResource extends AbstractTemplateResource
                     if (result instanceof InputStreamContent) {
                         return new InputRepresentation((InputStreamContent) result, MediaType.APPLICATION_OCTET_STREAM);
                     } else {
-                        return new StringRepresentation(result.toString(),
+                        return new StringRepresentation( PrettyString.toString(result),
                                 result instanceof HtmlContent ? MediaType.TEXT_HTML : MediaType.TEXT_PLAIN,
                                 Language.ALL, CharacterSet.UTF_8);
                     }
