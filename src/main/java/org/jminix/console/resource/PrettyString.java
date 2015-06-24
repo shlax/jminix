@@ -47,10 +47,10 @@ public class PrettyString {
 			CompositeData s = (CompositeData)o;
 			Set<String> keys = s.getCompositeType().keySet();
 			for(String k : keys){
-				for(int i = 0; i < tabs + ( startObject ? 0 : 1 ); i++) sb.append("\t");
+				for(int i = 0; i < tabs + ( startObject ? 1 : 0 ); i++) sb.append("\t");
 				sb.append(k).append(":\n");
 				
-				sb.append( toString(s.get(k), tabs + ( startObject ? 1 : 2 ), true) ); // inner content + 1
+				sb.append( toString(s.get(k), tabs + ( startObject ? 2 : 1 ), true) ); // inner content + 1
 				
 				sb.append("\n\n");
 			}
